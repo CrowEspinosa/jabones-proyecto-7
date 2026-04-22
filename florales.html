@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabones para mascotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jabones MyRose</h1>
+        <nav>
+            <div class="sub-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="frutales.html"> Frutales</a></li>
+                <li><a href="herbales.html"> Herbales</a></li>
+                <li><a href="mascotas.html"> Mascotas</a></li>
+                <li><a href="bebés.html"> Bebés</a></li>
+                <li><a href="mayoreo.html"> Mayoreo</a></li>
+            
+            </ul>
+        </div>
+        </nav>
+    </header>
+  
+    <div class="contenedor">
+        <form action="#" method="get" class="barra-busqueda" onsubmit="buscar(event)">
+          <input type="text" placeholder="Buscar..." name="busqueda" class="campo-busqueda" id="inputBusqueda">
+          <button type="submit" class="boton-busqueda">Buscar</button>
+        </form>
+      </div>
+      <h2> Jabones florales <style> h2{ background-color: bisque;}</style></h2>
+
+    <div id="elementos">
+      
+        <div class="contenedor-florales">
+           
+            <div class="elemento"> <div class="caja"> <h2>Rosas  $50 pesos</h2> <img src="imagenes/rosapng.png" height="200px" width="200px"> <p>En cada jabón encontrarás pétalos y botones de rosas que te servirán como desinflamatorio natural </p> <button> Comprar </button></div></div>
+
+            <div class="elemento"> <div class="caja"> <h2>Lavanda $50 pesos</h2> <img src="imagenes/lavandapng.png" height="200px" width="300px"><p>Jabon con esencia lavanda, baña a tu peludito con este jabon para que tenga un aroma delicioso</p> <button> Comprar </button> </div></div>
+
+            <div class="elemento"> <div class="caja"> <h2>Sakura $50 pesos</h2> <img src="imagenes/sakurapng.png" height="200px" width="300px"><p>Nuestro jabon de petalos de cerezo japones te ayudará a humectar tu piel dejandote un aroma delicioso </p> <button> Comprar </button> </div></div>
+
+            <div class="elemento"> <div class="caja"> <h2>Jazmin $50 pesos</h2> <img src="imagenes/jazminpng.png" height="200px" width="300px"><p>De la familia de los florales, está indicado para todo tipo de pieles, en especial las atópicas.  </p> <button> Comprar </button> </div></div>
+
+            <div class="elemento"> <div class="caja"> <h2> Lirio  $50 pesos</h2> <img src="imagenes/liriopng.png" height="200px" width="200px"> <p>El extracto de lirio, rico en flavonoides, posee propiedades hidratantes y antioxidantes. Disfrutalo en nuestro jabón </p> <button> Comprar </button></div></div>
+
+            <div class="elemento"> <div class="caja"> <h2> Gardenia $50 pesos</h2> <img src="imagenes/gardeniapng.png" height="200px" width="250px"><p>Nuestro jabón de Gardenia posee propiedades antiinflamatorias, antibacterianas y antioxidantes.</p> <button> Comprar </button> </div></div>
+
+            <div class="elemento"> <div class="caja"> <h2> Alyssum $50 pesos</h2> <img src="imagenes/Alyssum png.png" height="200px" width="250px"><p>El jabón de Alyssum es un buen suavizante para las manos y revitaliza la piel,  a la vez que nos dejará un agradable aroma floral </p> <button> Comprar </button> </div></div>
+
+            <div class="elemento"> <div class="caja"> <h2>Fresia $50 pesos</h2> <img src="imagenes/Fresiapng.png" height="200px" width="250px"><p>Nuestro jabón de Fresia tiene una concistencia cremosa y densa que aporta numerosos beneficios para la piel.</p> <button> Comprar </button> </div></div>
+
+       
+          </div>
+
+    
+</div>
+<script>function buscar(event) {
+    event.preventDefault();
+    
+    const inputValor = document.getElementById('inputBusqueda').value.toLowerCase(); 
+  
+    const elementos = document.getElementsByClassName('elemento'); 
+  
+    for (let elemento of elementos) {
+      const texto = elemento.textContent.toLowerCase(); 
+  
+      if (texto.includes(inputValor)) {
+        elemento.style.display = 'block'; 
+      } else {
+        elemento.style.display = 'none';
+      }
+    }
+  }
+  function buscar(event) {
+  event.preventDefault();
+
+  const inputValor = document.getElementById('inputBusqueda').value.toLowerCase();
+  const elementos = document.getElementsByClassName('elemento');
+
+  if (inputValor.trim() === '') {
+    
+    for (let elemento of elementos) {
+      elemento.style.display = 'block';
+    }
+    return; 
+  }
+
+  for (let elemento of elementos) {
+    const texto = elemento.textContent.toLowerCase();
+    if (texto.includes(inputValor)) {
+      elemento.style.display = 'block';
+    } else {
+      elemento.style.display = 'none';
+    }
+  }
+}
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Jabones MyRose</h1>
+        <img src="imagenes/Mrosa.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a> </li>
+                <li><a href="tiendaOnline.html">Tienda online</a></li>
+                <li><a href="mapa.html">Como llegar</a></li>
+                <li><a href="https://facebook.com">Facebook</a></li>
+                <li><a href="https://instagram.com">Instragram</a></li>
+            </header>
+            <section style="max-width: 600px; margin: 30px auto; padding: 20px; border: 2px solid #b893a9; border-radius: 10px; background-color: #f9f0fa;">
+                <h2 style="color: #70425d; text-align: center;">Foro de Opiniones</h2>
+              
+                <form action="/enviar-comentario" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+              
+                  <label for="comentario">Comentario:</label>
+                  <textarea id="comentario" name="comentario" rows="4" required style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+              
+                  <button type="submit" style="padding:10px;width: auto; background-color: #70425d; color: white; border: none; border-radius: 10px; cursor: pointer;">
+                    Publicar Comentario
+                  </button>
+                </form>
+              </section>
